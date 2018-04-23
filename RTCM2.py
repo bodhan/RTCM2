@@ -7,7 +7,6 @@ import pprint
 from datetime import datetime
 from bitField import bf
 
-
 import RTCM2_Type1
 import RTCM2_Type2
 import RTCM2_Type3
@@ -142,7 +141,7 @@ class RTCM2:
         self.Handler=[]
 
         self.commands={}
-        self.last_32_bits=bf(length=32)
+        self.last_32_bits=bf(0x00, width=32)
         self.bit_count=0
         self.framing_mode = HDR_WORD1_SRCH
         self.frame_locked=False
